@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Kameron";
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "Kameron";
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: "Kanit";
+    font-weight: 300;
+    font-size: 20px;
+}
+
+button {
+    background: #000000;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-image 0.5s out, color 0.3s ease-out;
+}
+
+button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+img {
+    width: 70px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+body {
+    align-items: center;
+}
+
+
+/* bara de navigare */
+
+nav {
+    display: flex;
+    justify-content: start;
+    width: 80%;
+    height: 70px;
+    align-items: center;
+    margin: 10px 10%;
+    position: fixed;
+    z-index: 1000;
+    padding: 0 5px;
+}
+
+nav.jos {
+    background-color: #7c69dce4;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    justify-content: center;
+}
+
+nav.noindex {
+    background-color: #7c69dce4;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+
+
+/* headerul */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10%;
+    height: 100vh;
+    background-image: url('./imagini/visoca.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #7c69dcb5;
+}
+
+header .content button {
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header .content button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #7c69dc;
+    color: #ffffff;
+}
+
+section {
+    margin: 5% 10%;
+}
+
+
+/* informatii */
+
+section.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+
+/* activitati */
+
+section.activitati {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.activitati .toate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+section.activitati .toate .divi {
+    background: #7c69dcc4;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section.activitati .toate .divi h3 {
+    font-weight: 800;
+}
+
+section.activitati .toate .divi .video {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+section.activitati .toate .divi .video video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* când ecranul e mai mic - 3 coloane */
+@media (max-width: 1024px) {
+    section.activitati .toate .divi .video {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* și mai mic - 2 coloane */
+@media (max-width: 768px) {
+    section.activitati .toate .divi .video {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* pentru ecrane foarte mici - 1 coloană */
+@media (max-width: 480px) {
+
+    section.activitati .toate .divi .video,
+    section.activitati .toate .divi .prezentare {
+        grid-template-columns: 1fr;
+    }
+}
+
+section.activitati .toate .divi .prezentare {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+section.activitati .toate .divi .prezentare iframe {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+section.activitati .toate .divi.turist {
+    width: 100%;
+}
+
+section.activitati .toate .divi .prezentare img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+section.activitati .toate .divi .video.ultim video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+section.activitati .toate .divi .video.ultim {
+    grid-template-columns: 1fr;
+}
+
+
+
+
+/* despre activitati */
+
+section.despre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.despre .text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+section.despre button:hover {
+    background-color: #d5d5d5;
+}
+
+section.despre .imagini {
+    display: flex;
+    gap: 10px;
+}
+
+section.despre .imagini img.unu {
+    width: 400px;
+}
+
+section.despre .imagini img.doi {
+    width: 200px;
+}
+
+
+/* despre echipa */
+
+section.echipa-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+section.echipa-info img {
+    width: 40%;
+    height: 300px;
+}
+
+section.echipa-info .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+section button:hover {
+    background-color: #d5d5d5;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #7c69dc;
+    color: #000;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    position: relative;
+}
+
+.footer-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #000000;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.5s ease, left 0.3s ease;
+}
+
+.footer-section:hover h3::after {
+    width: 70%;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #000;
+}
+
+.footer-section p:hover,
+.footer-section ul li a:hover,
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffffd4;
+    color: #000000;
+    font-size: 1.2em;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+#newsletter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin: 30px 10% 0 10%;
+    color: #000000;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+}
+
+
+
+
+@media (max-width: 850px) {
+    h1 {
+        font-weight: 800;
+        font-size: 30px;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 25px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    nav .right .link {
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    nav .right .link a {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
+
+    header .content {
+        gap: 10px;
+        width: 100%;
+    }
+
+
+    section.despre {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    section.despre .text {
+        width: 100%;
+    }
+
+    section.despre .imagini {
+        display: flex;
+        gap: 10px;
+    }
+
+    section.despre .imagini img.unu {
+        width: 60%;
+    }
+
+    section.despre .imagini img.doi {
+        width: 40%;
+    }
+
+
+
+    section.activitati .toate .divi {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+}
+
+
+@media (max-width: 540px) {
+    h1 {
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    section.unu {
+        flex-direction: column;
+    }
+
+    .imaginix {
+        justify-content: start;
+    }
+
+    .imaginix img {
+        width: 15%;
+        height: 15%;
+    }
+
+
+    .divk {
+        gap: 5px !important;
+    }
+
+    nav {
+        justify-content: end;
+        height: 50px;
+    }
+
+    nav a {
+        font-size: 10px !important;
+    }
+
+    nav img {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width: 450px) {
+    h1 {
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+
+    section,
+    section .text {
+        gap: 5px !important;
+    }
+
+
+    section.activitati .toate .divi {
+        flex: 1 1 100%;
+    }
+
+
+    #echip {
+        width: 40%;
+        height: 166px !important;
+    }
+
+
+
+}
+
+@media (max-width: 450px) {
+    nav a {
+        font-size: 7px !important;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 7px;
+    }
+}
