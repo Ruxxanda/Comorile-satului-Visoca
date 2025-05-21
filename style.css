@@ -146,6 +146,15 @@ section {
     margin: 5% 10%;
 }
 
+/* imnul */
+section.imn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 
 /* informatii */
 
@@ -197,7 +206,7 @@ section.activitati .toate .divi .video {
     width: 100%;
 }
 
-section.activitati .toate .divi .video video {
+section.activitati .toate .divi .video iframe {
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -248,9 +257,9 @@ section.activitati .toate .divi .prezentare img {
     border-radius: 5px;
 }
 
-section.activitati .toate .divi .video.ultim video {
+section.activitati .toate .divi .video.ultim iframe {
     width: 100%;
-    height: auto;
+    min-height: 500px;
     border-radius: 5px;
 }
 
